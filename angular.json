@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "travalgram"
+    }
+  },
+  "defaultProject": "travalgram",
+  "cli": {
+    "analytics": false
+  }
 }
