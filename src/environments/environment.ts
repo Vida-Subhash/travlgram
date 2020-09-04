@@ -5,14 +5,14 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyDC2uKvx-AgzE5_v07CkiuXdaQ5IptXO40",
-    authDomain: "signup-b0084.firebaseapp.com",
-    databaseURL: "https://signup-b0084.firebaseio.com",
-    projectId: "signup-b0084",
-    storageBucket: "signup-b0084.appspot.com",
-    messagingSenderId: "526962654161",
-    appId: "1:526962654161:web:0d3dbad45b202b77683ef0",
-    measurementId: "G-5CNPTJ598E"
+    apiKey: "AIzaSyBwvpU7dfjFek5tAB9EMhjP1zX_pPGy30Y",
+    authDomain: "travelgram-6508c.firebaseapp.com",
+    databaseURL: "https://travelgram-6508c.firebaseio.com",
+    projectId: "travelgram-6508c",
+    storageBucket: "travelgram-6508c.appspot.com",
+    messagingSenderId: "290938304378",
+    appId: "1:290938304378:web:b87764a555fffb1413c8c3",
+    measurementId: "G-9LSSEW4R1V"
   },
 };
 

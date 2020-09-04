@@ -19,25 +19,25 @@ const routes: Routes = [
     path: 'signin',
     component: SigninComponent,
     canActivate: [AngularFireAuthGuard],
-    data: {authGaurdPipe: redirectLoggedInToHome}
+    data: {authGuardPipe: redirectLoggedInToHome}
   },
   {
     path: 'signup',
     component: SignupComponent,
     canActivate: [AngularFireAuthGuard],
-    data: {authGaurdPipe: redirectLoggedInToHome}
+    data: {authGuardPipe: redirectLoggedInToHome}
   },
   {
     path: 'addpost',
     component: AddpostComponent,
     canActivate: [AngularFireAuthGuard],
-    data: {authGaurdPipe: redirectUnauthorizedToLogin}
+    data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
   {
     path: 'Home',
     component: HomeComponent,
     canActivate: [AngularFireAuthGuard],
-    data: {authGaurdPipe: redirectUnauthorizedToLogin}
+    data: {authGuardPipe: redirectUnauthorizedToLogin}
   },
   {
     path: '**',

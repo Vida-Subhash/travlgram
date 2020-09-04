@@ -34,14 +34,14 @@
               </div>
 
               <div
-                [hidden]="!uploadPrecent || uploadPrecent == 100"
+                [hidden]="!uploadPercent || uploadPercent == 100"
                 class="text-white text-center"
               >
                 uploading
-                {{ uploadPrecent | number: "1.0-0" }} % of 100%
+                {{ uploadPercent | number: "1.0-0" }} % of 100%
               </div>
               <div
-                *ngIf="uploadPrecent == 100"
+                *ngIf="uploadPercent == 100"
                 class="text-success text-uppercase text-center mb-3"
               >
                 Upload finished
