@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     .subscribe((obj) => {
       if(obj ) {
         this.users = Object.values(obj);
-        console.log(obj);
+        // console.log(obj);
         this.isLoading= false
       } else {
         this.toastr.error("No User Found");

@@ -51,7 +51,7 @@ export class SignupComponent implements OnInit {
 
     this.auth.signUp(email, password)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         const { uid } = res.user;
 
         this.db.object(`/users/${uid}`)
