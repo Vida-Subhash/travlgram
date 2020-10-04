@@ -1,4 +1,4 @@
-<div class="container ">
+<!-- <div class="container ">
 
   <div class="row mt-5">
     <div class="col col-6 offset-3">
@@ -26,8 +26,14 @@
               <label for="password" class="col-sm-3 col-form-label">Password</label>
 
               <div class="col-sm-9">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
-                  ngModel required />
+                <div class="input-group mb-3">
+                <input ngModel required
+                 [type]="show ? 'text' : 'password'" type="text" class="form-control" placeholder="Enter password"
+                 />
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary"(click)="password()" type="button" id="button-addon2">Show</button>
+                </div>
+              </div>
                 <small id="emailHelp" class="form-text text-muted">Minimum length of the password should be 6 or
                   more</small>
               </div>
@@ -46,4 +52,94 @@
     </div>
   </div>
 
+</div> -->
+
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col col-6 offset-3">
+      <div class="card">
+        <div class="card-header text-center text-info text-uppercase">
+          Sign In Please
+        </div>
+
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="form-group row">
+              <label for="email" class="col-sm-3 col-form-label">Email</label>
+
+              <div class="col-sm-9">
+                <input
+                  value="bobose123@gmail.com"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter Email"
+                  ngModel
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="password" class="col-sm-3 col-form-label"
+                >Password</label
+              >
+
+              <div class="col-sm-9">
+                <div class="input-group mb-3">
+                  <input
+                  value="user1234"
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter password"
+                  ngModel
+                  required
+                   [type]="show ? 'text' : 'password'"
+                   />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary"(click)="password()" type="button" id="button-addon2">Show</button>
+                  </div>
+                </div>
+                <!-- <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter password"
+                  ngModel
+                  required
+                /> -->
+                <small id="emailHelp" class="form-text text-muted"
+                  >Minimum length of the password should be 6 or more</small
+                >
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-primary" type="submit">
+                Sign In
+              </button>
+            </div>
+          </form>
+          <div style="display: flex; justify-content: center; ">
+            <span style="padding-top: 5.8px;">Dont  Have Account create Here</span>
+            <a style="text-decoration: underline; "
+            routerLinkActive="active"
+            [routerLink]="['/signup']" class="nav-item nav-link"
+              >Sign Up</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div style="display: flex; justify-content: center; color: wheat;">
+    username: bobose123@gmail.com <br>
+    password: user1234
 </div>

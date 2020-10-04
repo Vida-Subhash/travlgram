@@ -23,21 +23,27 @@ import { imageConfig } from "src/utils/config";
 })
 export class SignupComponent implements OnInit {
   picture: string =
-    "https://learnyst.s3.amazonaws.com/assets/schools/2410/resources/images/logo_lco_i3oab.png";
+  "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png";
 
   uploadPercent: number = null;
-
+  show: boolean;
   constructor(
     private auth: AuthService,
     private router: Router,
     private db: AngularFireDatabase,
     private storage: AngularFireStorage,
     private toastr: ToastrService,
-  ) {}
+  ) {
+    this.show = false;
+  }
 
   ngOnInit(): void {
   }
 
+  // Show password
+  password() {
+    this.show = !this.show;
+}
   onSubmit(f: NgForm) {
     const { email, password, username, country, bio, name } = f.form.value;
 

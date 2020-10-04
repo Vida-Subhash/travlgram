@@ -26,6 +26,11 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
+// Angular Material
+
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 @NgModule({
   declarations: [
@@ -53,7 +58,10 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
 
-    FontAwesomeModule
+    FontAwesomeModule,
+
+    MatIconModule,
+    MatTooltipModule
     ],
   providers: [],
   bootstrap: [AppComponent]

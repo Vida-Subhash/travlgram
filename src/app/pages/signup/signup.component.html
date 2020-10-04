@@ -10,15 +10,20 @@
           <form (ngSubmit)="onSubmit(f)" #f="ngForm">
             <div>
               <!-- image picker -->
-              <div class="text-center">
+              <div class="text-center" >
                 <label for="imagepicker" class="">
+
                   <img
+                  style="cursor: pointer;"
+                  matTooltip="Click here to Upload Profile"
+                  class="main-profile-img"
                     [src]="picture"
                     width="40"
                     height="40"
                     alt=""
-                    class="profile"
+
                   />
+
                 </label>
 
                 <input
@@ -83,7 +88,8 @@
                 >Password</label
               >
               <div class="col-sm-9">
-                <input
+                 <div class="input-group mb-3">
+                  <input
                   type="password"
                   class="form-control"
                   id="password"
@@ -91,7 +97,21 @@
                   placeholder="Enter password"
                   required
                   ngModel
-                />
+                   [type]="show ? 'text' : 'password'" type="text"
+                   />
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary"(click)="password()" type="button" id="button-addon2">Show</button>
+                  </div>
+                </div>
+                <!-- <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter password"
+                  required
+                  ngModel
+                /> -->
                 <small id="emailHelp" class="form-text text-muted"
                   >Minimum length of the password should be 6 or more</small
                 >
@@ -155,8 +175,18 @@
               </button>
             </div>
           </form>
+          <div style="display: flex; justify-content: center; ">
+            <span style="padding-top: 5.8px;">Already Have Account</span>
+            <a style="text-decoration: underline; "
+            routerLinkActive="active"
+            [routerLink]="['/signin']" class="nav-item nav-link"
+              >Sign In</a
+            >
+          </div>
+
         </div>
       </div>
     </div>
   </div>
 </div>
+

@@ -11,17 +11,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
+  show: boolean;
   constructor(
     private auth : AuthService,
     private toastr: ToastrService,
     private router: Router
-  ) { }
+  ) {
+    this.show = false;
+   }
 
   ngOnInit(): void {
   }
 
+  password() {
+    this.show = !this.show;
+}
   onSubmit(f: NgForm) {
+
     const { email, password } = f.form.value;
 
     this.auth.signIn(email, password)
